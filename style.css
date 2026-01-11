@@ -11,3 +11,41 @@ body {
 	color: white;
 	font-family: "Courier New", Courier, monospace;
 }
+
+#board {
+	width: 420px;
+	height: 420px;
+	margin: auto;
+	margin-top: 60px;
+	display: grid;
+	grid-template-columns: repeat(8, 1fr);
+	grid-template-rows: repeat(8, 1fr);
+	perspective: 900px;
+	transform: rotateX(55deg);
+}
+
+.tile {
+	background: #101828;
+	border: 1px solid rgba(255, 255, 255, 0.05);
+	position: relative;
+	transition: 0.3s;
+}
+
+.tile:nth-child(odd) {
+	background: #0b1220;
+}
+
+.tile:hover {
+	filter: brightness(1.4);
+	transform: translateZ(10px);
+}
+
+.tile.start {
+	background: #00ffd5;
+}
+.tile.end {
+	background: #ff4b7d;
+}
+.tile.path {
+	background: #7f5cff;
+}
