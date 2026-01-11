@@ -1,0 +1,13 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	height: 100dvh;
+	width: 100%;
+	margin: 0;
+	background: #1a1a1a;
+	color: white;
+	font-family: "Courier New", Courier, monospace;
+}
