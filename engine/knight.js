@@ -19,24 +19,35 @@ function getNeighbors([x, y]) {
 	);
 }
 
-export function knightMoves(start, end) {
-	const queue = [[start]];
+export function knightSteps(start, end) {
+	const queue = [start];
 	const visited = new Set([start.toString()]);
+	const parents = {};
+
+	const steps = [];
 
 	while (queue.length) {
-		const path = queue.shift();
-		const node = path[path.length - 1];
+		const node = queue.shift();
+		steps.push({ node });
 
-		if (node[0] === end[0] && node[1] === end[1]) {
-			return path;
-		}
+		if (node[0] === end[0] && node[1] === end[1]) break;
 
-		for (const next of getNeighbors(node)) {
-			const key = next.toString();
+		for (const n of getNeighbors(node)) {
+			const key = n.toString();
 			if (!visited.has(key)) {
 				visited.add(key);
-				queue.push([...path, next]);
+				parents[key] = node;
+				queue.push(n);
 			}
 		}
 	}
+
+	const path = [];
+	let cur = end;
+	while (cur) {
+		path.push(cur);
+		cur = parents[cur.toString()];
+	}
+
+	return { steps, path: path.reverse() };
 }
