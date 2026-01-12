@@ -102,7 +102,7 @@ async function animateJourney(path) {
 
 		await new Promise((r) => setTimeout(r, 450));
 	}
-
+	setTimeout(() => board.classList.add("locked"), path.length * 50);
 	isAnimating = false;
 	hint.textContent = "Goal Reached! Click anywhere to reset.";
 }
@@ -125,6 +125,7 @@ function endPos(idx) {
 function resetGame() {
 	const tiles = document.querySelectorAll(".tile");
 	tiles.forEach((t) => t.classList.remove("start", "end", "path", "visited"));
+	board.classList.remove("locked");
 	start = null;
 	end = null;
 	knightPiece.style.display = "none";
