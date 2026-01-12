@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Macondo+Swash+Caps&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ephesis&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 * {
 	box-sizing: border-box;
@@ -31,11 +31,12 @@ body {
 }
 
 h1 {
-	font-family: "Macondo Swash Caps", cursive;
+	font-family: "Ephesis", cursive;
 	font-weight: 600;
+	font-style: normal;
 	margin: 0 0 10px 0;
 	letter-spacing: -0.5px;
-	font-size: clamp(2rem, 4vw, 3rem);
+	font-size: clamp(2.5rem, 4vw, 3rem);
 	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
@@ -50,6 +51,7 @@ h1 {
 	border: 2px solid rgba(255, 255, 255, 0.4);
 	backdrop-filter: blur(25px);
 	display: inline-block;
+	margin-top: 0;
 }
 
 #board-container {
@@ -204,4 +206,13 @@ h1 {
 
 .footer svg {
 	opacity: 0.8;
+}
+
+@media (max-width: 500px) {
+	#ui {
+		top: 10%;
+	}
+	#hint {
+		margin-top: 10px;
+	}
 }
