@@ -5,7 +5,7 @@ An upgrade version of the Knights Travails Assignment of The Odin Project
 Interactive visualization of the shortest path a knight can take across a chessboard. Built as a visual implementation of the classic Knights Travails problem using Breadth-First Search (BFS).
 
 <p align="center">
-https://github.com/user-attachments/assets/ff0a6b89-78d0-45d1-ba29-209ca536f491
+  <video src="https://github.com/user-attachments/assets/ff0a6b89-78d0-45d1-ba29-209ca536f491" widht="800">
 </p>
 ## What it does
 
